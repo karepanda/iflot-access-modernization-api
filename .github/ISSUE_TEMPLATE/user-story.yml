@@ -1,0 +1,65 @@
+name: User Story
+description: Create a user story using the standard project format
+title: "[User Story] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the issue title field above for the Story title.
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      description: Write the story in the format "As a..., I want..., so that..."
+      placeholder: |
+        As a...
+        I want...
+        so that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Add short context and scope
+      placeholder: Describe the story clearly and concisely...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Add one criterion per line
+      placeholder: |
+        - Repository exists
+        - README added
+        - docs folder created
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      description: Check the items that apply before closing the story
+      options:
+        - label: Work completed
+        - label: Acceptance criteria validated
+        - label: Files committed and pushed
+        - label: Basic documentation updated
+        - label: Reviewed and ready to continue
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
