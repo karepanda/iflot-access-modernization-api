@@ -1,20 +1,3 @@
-Conversation opened. 1 unread message.
-
-Skip to content
-Using Gmail with screen readers
-
-3 of 509
-README Iflow access API
-Inbox
-
-Kenny Perez
-Attachments
-Sat, Mar 21, 1:34 PM (2 days ago)
-to me
-
-Debes actualizar cuando creen el repo es la URL del git clone.
- One attachment
-  •  Scanned by Gmail
 # iFlot Access API
 
 Backend service responsible for modernizing access control in the iFlot platform.
