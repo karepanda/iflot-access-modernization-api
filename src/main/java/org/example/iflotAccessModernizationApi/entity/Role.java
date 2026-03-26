@@ -1,13 +1,9 @@
 package org.example.iflotAccessModernizationApi.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.proxy.HibernateProxy;
+import lombok.*;
 
 import java.util.LinkedHashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -15,8 +11,8 @@ import java.util.Set;
 uniqueConstraints = {
         @UniqueConstraint(name = "uk_role_name", columnNames = "name")
 })
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 public class Role {
     @Id
@@ -29,4 +25,7 @@ public class Role {
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private Set<User> users = new LinkedHashSet<>();
 
+    public Role(String name) {
+        this.name = name;
+    }
 }
